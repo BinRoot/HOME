@@ -1,38 +1,38 @@
 My dot-files and scripts at $HOME
 =================================
 
-** .irssi/ **
+**`.irssi/`**
 
     IRC configs and scripts
 
-** bin/ **
+**`bin/`**
 
     Useful globally accessible scripts
 
-** .bash_aliases **
+**`.bash_aliases`**
 
     Aliases used in bash
 
-** .bashrc **
+**`.bashrc`**
 
     Preferred bash functions
 
-** .emacs **
+**`.emacs`**
 
     Emacs config
 
-** .gitconfig **
+**`.gitconfig`**
 
     Git config with aliases
 
-** .gitmodules **
+**`.gitmodules`**
 
     Used for .xmonad and other submodules
 
-** .xmobarrc **
+**`.xmobarrc`**
 
     Used maily in xmonad
 
-** .xmonad **
+**`.xmonad`**
 
     Tiling window manager configs
