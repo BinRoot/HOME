@@ -1,0 +1,19 @@
+#!/bin/bash
+# define - command line dictionary
+
+DICTCHECK=$(echo "$1" | aspell -a | sed '1d' | wc -m)
+
+# Usage if parameter isn't given
+if [[ -z $1 ]]; then
+  echo " define <word-to-lookup> - command line dictionary"
+  exit 1
+fi
+
+# Suggestions if word is not in dictionary, otherwise define
+if [[ $DICTCHECK -gt "3" ]]; then
+  echo "$@" | aspell -a | sed '/Ispell/ c\\nNot in dictionary, possible alternatives:\n'| sed 's/^.*: //'
+  exit 2; else
+  links -dump http://wordnetweb.princeton.edu/perl/webwn?s="$1" | sed \
+  '1,5d' | sed '$d' | sed '$G' | sed 's/^ //' | sed 's/^    /  /' | sed \
+  's/S\: //' | sed -e 's/*/\c[[1;37m*\c[[m/' -e 's/'"$1"'/\c[[4;37m'"$1"'\c[[m/'
+fi
