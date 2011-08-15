@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# pull all git repos through a directory
+
+for x in ./*
+do
+    echo "Entering $x"
+    cd $x;
+    git pull;
+    cd ..;
+done
