@@ -1,0 +1,5 @@
+alias e='emacs'
+alias en='emacs -nw'
+alias ack='ack-grep'
+alias n='nautilus'
+alias myip='wget -q -O - whatismyip.org; echo ""'

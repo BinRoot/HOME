@@ -1,0 +1,16 @@
+Config { font = "-Misc-Fixed-Normal-R-Normal--13-120-75-75-C-70-ISO8859-1"
+       , bgColor = "#222222"
+       , fgColor = "grey"
+       , position = Top
+       , commands = [ Run Cpu ["-t", "<total>", "-L","5","-H","40","--normal","green","--high","red"] 10
+       	 	    , Run BatteryP ["BAT0"] ["-L","15","-H","30","--low","red","--normal","orange"] 100
+                    , Run Memory ["-t", "<usedratio>%"] 10
+		    , Run Network "wlan0" ["-L","0","-H","32","--normal","green","--high","red"] 10
+                    , Run Date "%a %b %_d %l:%M:%S" "date" 10
+		    , Run MultiCpu ["-t","Cpu:<total0><total1><total2><total3>","-L","3","-H","50","--normal","#CEFFAC","--high","#FFB6B0","-w","5"] 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %battery% | %multicpu% | Mem: %memory% | %wlan0%  | Date: %date%" 
+       }
