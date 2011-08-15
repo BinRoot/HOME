@@ -1,0 +1,16 @@
+[user]
+	name = BinRoot
+	email = nick722@gmail.com
+[core]
+	editor = "emacs -nw"
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = true
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	ci = commit
