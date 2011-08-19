@@ -259,7 +259,7 @@ statusbar = {
   };
 };
 settings = {
-  core = {
+  core = { 
     real_name = "BinRoot";
     user_name = "binroot";
     nick = "binroot";
@@ -268,3 +268,4 @@ settings = {
   "fe-common/core" = { bell_beeps = "yes"; autolog = "yes"; };
 };
 logs = { };
+hilights = ( { text = "phiV"; nick = "yes"; word = "yes"; } );
