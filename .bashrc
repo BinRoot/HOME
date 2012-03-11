@@ -106,8 +106,6 @@ fi
 
 # Add directories to PATH
 PATH=$PATH:$HOME/bin
-PATH=$PATH:$HOME/Projects/android-sdk-linux_x86/platform-tools
-Path=$PATH:$HOME/Projects/android-sdk-linux_x86/tools
 
 # For cdargs
 source /usr/share/doc/cdargs/examples/cdargs-bash.sh
