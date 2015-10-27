@@ -5,9 +5,9 @@ alias n='nautilus'
 
 cdls() {
    if [ -z "$1" ]; then
-       cd && ls
+       builtin cd && ls
    else
-       cd "$*" && ls  
+       builtin cd "$*" && ls  
    fi  
 }
 alias cd=cdls
